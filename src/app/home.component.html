@@ -1,0 +1,45 @@
+<div class="cute-container">
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Magia ilustrada para tu día a día ✨</h1>
+        <p>Diseños originales hechos con amor y colores pastel.</p>
+        <button class="btn-primary">Ver Galería</button>
+      </div>
+      <div class="hero-image">
+        <div class="placeholder-img">🎨</div>
+      </div>
+    </header>
+  
+    <section class="gallery">
+      <h2>Nuestras Creaciones</h2>
+      <div class="product-grid">
+        <div class="product-card" *ngFor="let p of productos">
+          <div class="card-img"></div>
+          <h3>{{ p.titulo }}</h3>
+          <p class="price">{{ p.precio | currency }}</p>
+          <button class="btn-small">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+  
+    <footer class="contact-section">
+      <div class="contact-container">
+        <div class="social-info">
+          <h2>¡Hablemos! 💌</h2>
+          <p>Síguenos en nuestras redes para ver el proceso creativo:</p>
+          <div class="social-icons">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Pinterest</a>
+          </div>
+        </div>
+  
+        <form [formGroup]="contactForm" (ngSubmit)="enviarMensaje()" class="cute-form">
+          <input type="text" formControlName="nombre" placeholder="Tu nombre">
+          <input type="email" formControlName="email" placeholder="Tu email">
+          <textarea formControlName="mensaje" placeholder="Cuéntanos tu idea..."></textarea>
+          <button type="submit" [disabled]="contactForm.invalid">Enviar Chispa ✨</button>
+        </form>
+      </div>
+    </footer>
+  </div>
