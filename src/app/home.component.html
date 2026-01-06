@@ -1,4 +1,5 @@
 <div class="main-wrapper" [style.background-color]="bgColor">
+  
   <nav class="modern-nav">
     <div class="dropdown-content">
       <a (mouseenter)="cambiarFondo('#FFEDF0')" (mouseleave)="restablecerFondo()">✨ Stickers</a>
@@ -7,12 +8,13 @@
     </div>
   </nav>
 </div>
-
+ 
 <nav class="modern-nav">
   <div class="nav-container">
-    <div class="logo">
-      <span class="dot"></span> ✨ Ilustra<span>Design</span>
-    </div>
+    
+      <div class="logo-container" routerLink="/">
+        <img src="assets/Logo.png" alt="Logo Mi Marca" class="brand-logo">
+      </div>
 
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
@@ -27,13 +29,22 @@
       </li>
       <a [routerLink]="['/contacto']">Contacto</a>
     </ul>
-
+    <div class="nav-icons">
+      <a href="https://www.hoshibun.com" target="_blank" class="cart-link">
+        <div class="cart-icon-wrapper">
+          <span class="icon">🛒</span>
+        </div>
+      </a>
+    </div>
+    <!--
     <div class="nav-actions">
       <button class="cart-btn" (click)="abrirCarrito()">
         <span class="icon">🛒</span>
         <span class="badge" *ngIf="carritoCount > 0">{{ carritoCount }}</span>
       </button>
     </div>
+    -->
+      
   </div>
 </nav>
   <div class="nav-actions">
@@ -42,8 +53,8 @@
     </button>
   </div>
 
-<div class="cute-container">
-    <header class="hero">
+ 
+  <header class="hero">
       <div class="hero-content">
         <h1>Magia ilustrada para tu día a día ✨</h1>
         <p>Diseños originales hechos con amor y colores pastel.</p>
@@ -54,13 +65,16 @@
       </div>
     </header>
   
+<div class="cute-container">
+    
+  
     <section class="gallery">
       <div class="product-grid">
         <div class="product-card" *ngFor="let p of productos">
           <div class="card-img"></div>
           <h3>{{ p.titulo }}</h3>
           <p class="price">{{ p.precio | currency }}</p>
-          <button class="btn-small">Ver mas</button>
+          <button class="btn-product">Ver en la tienda</button>
         </div>
       </div>
     </section>
@@ -102,7 +116,9 @@
       <div class="footer-container">
         
         <div class="footer-section">
-          <h3>✨ IlustraDesign</h3>
+          <div class="logo-container" routerLink="/">
+            <img src="assets/estrella.png" alt="Logo Mi Marca" class="brand-logo">
+          </div>
           <p>Creando pedacitos de magia en papel y digital desde 2024. Cada trazo cuenta una historia única.</p>
         </div>
     
@@ -118,11 +134,11 @@
         <div class="footer-section">
           <h4>Síguenos</h4>  
             <div class="social-icons">
-              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+              <a href="https://www.instagram.com/hoshibun.studio/" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="https://x.com/hoshibunstudio/" class="social-link"><i class="fab fa-x"></i></a>
+              <a href="https://es.pinterest.com/084jhyyzdtdmnu0xtpaza0regi14sz/" class="social-link"><i class="fab fa-pinterest"></i></a>
             </div>
-          <p class="copyright">© 2026 Hecho con ✨ por IlustraDesign</p>
+          <p class="copyright">© 2026 Hecho con ✨ por hoshibun studio</p>
         </div>
     
       </div>

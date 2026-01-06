@@ -1,11 +1,84 @@
+:root {
+  --rosa-marca: #FFB7C5;
+  --rosa-hover: #ff9fb2;
+  --cafe-texto: #5D4037;
+}
+
+/* Y ahora lo usas así en cualquier parte: */
+.cart-badge {
+  background-color: var(--rosa-marca);
+}
+
+.footer-social-icons span {
+  color: var(--rosa-marca);
+}
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
   background-color: #FFF9F0; /* Tu color crema de fondo */
+  scroll-behavior: smooth;
 }
 
 app-root {
   display: block;
   min-height: 100vh;
+}
+// Definimos las fuentes para toda la web
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #5D4037; // Tu color café oscuro para que no sea negro puro
+  margin: 0;
+  -webkit-font-smoothing: antialiased; // Hace que las letras se vean más suaves
+}
+
+// Estilo específico para todos los títulos
+h1, h2, h3, h4, .logo {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+h1 { font-size: 2.8rem; line-height: 1.2; }
+h2 { font-size: 2.1rem; color: #FFB7C5; } // Tus títulos de sección en rosa
+h3 { font-size: 1.5rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.6; // Esto da "aire" entre líneas y facilita la lectura
+  font-weight: 400;
+  color: #6d6d6d; // Un gris oscuro para los párrafos
+}
+
+.small-text {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+html {
+  scroll-behavior: smooth;
+}
+.btn-product {
+  @extend .btn-cute !optional; // Hereda el rebote que ya creamos
+  background: linear-gradient(135deg, #FFB7C5 0%, #ff9fb2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%; // Ocupa todo el ancho de la card para que sea fácil de pulsar
+  position: relative;
+  overflow: hidden;
+
+  // El icono (bolsita o estrella) que está escondido a la izquierda
+  &::before {
+    content: '🛒';
+    position: absolute;
+    left: -30px;
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    padding-left: 35px; // Abre espacio para el icono
+    &::before {
+      left: 15px; // El icono entra en escena
+    }
+  }
 }
