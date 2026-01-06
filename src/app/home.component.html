@@ -1,14 +1,4 @@
 <div class="main-wrapper" [style.background-color]="bgColor">
-  
-  <div class="cute-container">
-    
-    <header id="inicio" class="hero">
-      <div class="hero-content">
-        <h1>Magia ilustrada para tu día a día ✨</h1>
-        </div>
-    </header>
-  </div>
-
   <nav class="modern-nav">
     <div class="dropdown-content">
       <a (mouseenter)="cambiarFondo('#FFEDF0')" (mouseleave)="restablecerFondo()">✨ Stickers</a>
@@ -16,10 +6,6 @@
       <a (mouseenter)="cambiarFondo('#EFFFF0')" (mouseleave)="restablecerFondo()">📔 Agendas</a>
     </div>
   </nav>
-
-  <div class="cute-container">
-    <header class="hero">...</header>
-  </div>
 </div>
 
 <nav class="modern-nav">
@@ -78,7 +64,40 @@
         </div>
       </div>
     </section>
-
+    <section class="noticias-section">
+      <div class="section-header">
+        <h2>Últimas Novedades ✨</h2>
+        <p>Entérate de lo que está pasando en el estudio</p>
+      </div>
+    
+      <div class="noticias-grid">
+        <article class="news-card">
+          <div class="card-image">
+            <img src="assets/news-1.jpg" alt="Nueva Colección">
+            <span class="badge">Nuevo</span>
+          </div>
+          <div class="card-content">
+            <span class="date">6 de Enero, 2026</span>
+            <h3>¡Nueva Colección de Stickers de Invierno! ❄️</h3>
+            <p>Ya están disponibles los nuevos diseños inspirados en la nieve y el chocolate caliente. ¡No te quedes sin los tuyos!</p>
+            <button class="btn-leer">Leer más</button>
+          </div>
+        </article>
+    
+        <article class="news-card">
+          <div class="card-image">
+            <img src="assets/news-2.jpg" alt="Taller Online">
+            <span class="badge">Evento</span>
+          </div>
+          <div class="card-content">
+            <span class="date">15 de Enero, 2026</span>
+            <h3>Próximo Taller de Acuarela Digital 🎨</h3>
+            <p>Aprende mis técnicas favoritas para crear ilustraciones mágicas desde cero. Cupos limitados para este mes.</p>
+            <button class="btn-leer">Inscribirme</button>
+          </div>
+        </article>
+      </div>
+    </section>
     <footer class="cute-footer">
       <div class="footer-container">
         
