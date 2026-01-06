@@ -1,0 +1,68 @@
+$pastel-pink: #FFB7C5;
+$pastel-purple: #E0BBE4;
+$text-brown: #5D4037;
+
+.contacto-section {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto-card {
+  background: white;
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0 15px 40px rgba($pastel-pink, 0.2);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border: 3px solid $pastel-purple;
+}
+
+.cute-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+
+  input, textarea {
+    padding: 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+    transition: border-color 0.3s;
+
+    &:focus { border-color: $pastel-pink; }
+  }
+
+  button {
+    background: $pastel-pink;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    &:disabled { background: #ccc; cursor: not-allowed; }
+    &:hover:not(:disabled) { transform: scale(1.05); }
+  }
+}
+
+.iconos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  .social-link {
+    text-decoration: none;
+    color: $text-brown;
+    background: #fdf2f4;
+    padding: 8px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    &:hover { background: $pastel-pink; color: white; }
+  }
+}

@@ -1,0 +1,22 @@
+<section id="contacto" class="contacto-section">
+    <div class="contacto-card">
+      <h2>¡Hablemos! 💌</h2>
+      <p>¿Tienes una idea para una ilustración o quieres un diseño personalizado?</p>
+  
+      <form [formGroup]="contactoForm" (ngSubmit)="enviar()" class="cute-form">
+        <input type="text" formControlName="nombre" placeholder="Tu nombre">
+        <input type="email" formControlName="email" placeholder="Tu email">
+        <textarea formControlName="mensaje" placeholder="Cuéntanos tu idea..."></textarea>
+        <button type="submit" [disabled]="contactoForm.invalid">Enviar Chispa ✨</button>
+      </form>
+  
+      <div class="redes-sociales">
+        <p>O búscanos en nuestras redes:</p>
+        <div class="iconos">
+          <a href="#" class="social-link">📸 Instagram</a>
+          <a href="#" class="social-link">🎬 TikTok</a>
+          <a href="#" class="social-link">📌 Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </section>
